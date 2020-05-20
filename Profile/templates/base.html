@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <title>Authentication App</title>
+        <link rel="stylesheet" href = "{% static 'css/main.css' %}">
+    </head>
+
+    <body style="margin: 0; padding: 0;">
+        <nav  style="height: 40px; width: 100%; background-color: black; color:wheat; display:inline-flex; align-items: center; justify-content: center; justify-content: space-between;">
+
+            <a style="margin-left: 30px;"><h3>  hello, {{request.user}} </h3></a>
+            <a style="margin-right:30px ; " href="{% url 'logout' %}">Logout</a>
+        </nav>
+        {% block content %}
+
+
+        {% endblock content %}
+    </body>
+
+</html>
